@@ -2,7 +2,9 @@
 
 App de cuidado de plantas con identificación por IA, gestión de jardín personal, y notificaciones de cuidado.
 
-**Stack**: _Por definir_
+**Stack**:
+- **Frontend**: Expo (React Native) + TypeScript — mobile-only
+- **Backend**: Python + FastAPI
 
 ---
 
