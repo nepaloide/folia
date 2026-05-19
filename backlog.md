@@ -4,7 +4,8 @@ App de cuidado de plantas con identificación por IA, gestión de jardín person
 
 **Stack**:
 - **Frontend**: Expo (React Native) + TypeScript — mobile-only
-- **Backend**: Python + FastAPI
+- **Backend**: Python + FastAPI + PostgreSQL
+- **Arquitectura**: Modular con service/repository — ver [`architecture.md`](architecture.md)
 
 ---
 
@@ -22,8 +23,7 @@ App de cuidado de plantas con identificación por IA, gestión de jardín person
 |:---|:--------|:------------|:----------|:-------|
 | US-04 | Añadir planta con IA | Foto → PlantNet → 3-5 sugerencias → cuidados pre-rellenados + diagnóstico inicial | Alta | ✅ Definida |
 | US-05 | Añadir planta manual | Búsqueda manual cuando la IA falla o sin conexión | Media | ✅ Definida |
-| US-06 | Editar planta | Nombre, fotos, especie, frecuencias de cuidado (riego, abono, transplante, etc.) | Media | ✅ Definida |
-
+| US-06 | Editar planta | Nombre, fotos, especie, y configuración de cuidados (riego, abono, transplante, poda, limpieza, fumigación) con intervalos y estacionalidad | Media | ✅ Definida |
 | US-08 | Eliminar planta | Borrado permanente con confirmación | Media | ✅ Definida |
 | US-09 | Ver historial de planta | Timeline cronológico inverso con eventos de cuidado (riego, abono, transplante, diagnósticos) | Media | ✅ Definida |
 | US-10 | Diagnosticar enfermedad | Foto → IA → enfermedades con probabilidad → tratamiento → estado "En tratamiento" | Alta | ✅ Definida |
@@ -36,6 +36,7 @@ App de cuidado de plantas con identificación por IA, gestión de jardín person
 - US-04: Dependencia PlantNet a abstraer
 - US-10: Añadir umbral mínimo de confianza (40 %)
 - US-32: Las fotos se muestran como galería en la pantalla de detalle de la planta, ordenadas por fecha
+- Ver `architecture.md` para modelo de datos completo, estructura de módulos, y decisiones de diseño
 
 ### Cuidado Diario
 
