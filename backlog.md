@@ -21,7 +21,7 @@ App de cuidado de plantas con identificación por IA, gestión de jardín person
 | US-04 | Añadir planta con IA | Foto → PlantNet → 3-5 sugerencias → cuidados pre-rellenados + diagnóstico inicial | Alta | ✅ Definida |
 | US-05 | Añadir planta manual | Búsqueda manual cuando la IA falla o sin conexión | Media | ✅ Definida |
 | US-06 | Editar planta | Nombre, fotos, especie, frecuencias de cuidado (riego, abono, transplante, etc.) | Media | ✅ Definida |
-| US-07 | Archivar planta | Ocultar del jardín activo manteniendo historial | Media | ✅ Definida |
+
 | US-08 | Eliminar planta | Borrado permanente con confirmación | Media | ✅ Definida |
 | US-09 | Ver historial de planta | Timeline cronológico inverso con eventos de cuidado (riego, abono, transplante, diagnósticos) | Media | ✅ Definida |
 | US-10 | Diagnosticar enfermedad | Foto → IA → enfermedades con probabilidad → tratamiento → estado "En tratamiento" | Alta | ✅ Definida |
@@ -61,6 +61,7 @@ App de cuidado de plantas con identificación por IA, gestión de jardín person
 |:---|:-----|:-------|
 | US-02 | Sign in con credenciales | No hace falta: solo Google/Apple OAuth |
 | US-03 | Recuperar contraseña | No hace falta: OAuth maneja la identidad |
+| US-07 | Archivar planta | No aporta al MVP: eliminar cubre el caso de limpieza |
 | US-20 | Gestionar cuenta (nombre, contraseña, cerrar sesión) | No hace falta: Google maneja la cuenta |
 | US-21 | Eliminar cuenta | No hace falta: Google maneja la identidad |
 | US-23 | Relanzar guía contextual | Baja prioridad, no esencial para MVP |
