@@ -57,14 +57,6 @@ App de cuidado de plantas con社区 integrada. Identificación por IA, cuidado d
 | US-21 | Eliminar cuenta | Borrado completo con reautenticación | Media | ✅ Definida |
 | US-23 | Relanzar guía contextual | Re-activar cualquier tutorial desde Ajustes > Ayuda | Baja | ✅ Definida |
 
-### IA (pendiente de definir)
-
-| ID | Feature | Descripción | Prioridad | Estado |
-|:---|:--------|:------------|:----------|:-------|
-| US-24 | Asistente de cuidados RAG | Chat en lenguaje natural sobre una planta concreta, respuestas basadas en historial y especie | Alta | ❓ Por definir |
-
-**Nota**: Núcleo del sistema RAG con pgvector.
-
 ### Social (pendiente de definir)
 
 | ID | Feature | Descripción | Prioridad | Estado |
@@ -108,11 +100,12 @@ Las especies se clasifican dinámicamente según cuántos usuarios las tienen re
 
 ## Ideas Descartadas o Aplazadas
 
-| Idea | Motivo |
-|:----|:-------|
-| Feed cronológico tipo Instagram | Genera ruido y necesita masa crítica. El contenido en Folía debe estar ligado a una especie o planta concreta |
-| Sistema de likes y seguidores | Convierte la app en una red social genérica. No es el objetivo |
-| Comunidad de diagnóstico colaborativo | Buena idea pero el cuidado lo gestiona la IA — la comunidad es para compartir, no para resolver dudas técnicas |
+| ID | Idea | Motivo |
+|:---|:----|:-------|
+| US-24 | Asistente de cuidados RAG | Chat en lenguaje natural sobre una planta. Innecesario: el core de Folía es cuidado + comunidad, no un chat genérico |
+| — | Feed cronológico tipo Instagram | Genera ruido y necesita masa crítica. El contenido en Folía debe estar ligado a una especie o planta concreta |
+| — | Sistema de likes y seguidores | Convierte la app en una red social genérica. No es el objetivo |
+| — | Comunidad de diagnóstico colaborativo | Buena idea pero el cuidado lo gestiona la IA — la comunidad es para compartir, no para resolver dudas técnicas |
 
 ---
 
