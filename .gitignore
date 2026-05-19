@@ -30,5 +30,6 @@ npm-debug.log*
 # Test coverage
 coverage/
 
-# OpenCode transient
+# OpenCode
+.atl/
 .tmp/
