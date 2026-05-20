@@ -1,24 +1,55 @@
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { getToken } from './src/modules/auth/authStorage';
+import LoginScreen from './src/screens/LoginScreen';
+import TabNavigator from './src/navigation/TabNavigator';
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const token = await getToken();
+      setIsAuthenticated(token !== null);
+    })();
+  }, []);
+
+  const handleAuthChange = () => {
+    setIsAuthenticated(true);
+  };
+
+  if (isAuthenticated === null) {
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <>
+        <LoginScreen onAuthChange={handleAuthChange} />
+        <StatusBar style="auto" />
+      </>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Folía - Bienvenido</Text>
+    <NavigationContainer>
+      <TabNavigator />
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  loading: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    backgroundColor: '#fff',
   },
 });

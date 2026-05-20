@@ -7,6 +7,9 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from app.core.config import settings
 from app.core.database import Base
 
+# Import models so they register in Base.metadata for autogenerate
+import app.models  # noqa: F401 — ensures User table is detected
+
 # Alembic Config object
 config = context.config
 

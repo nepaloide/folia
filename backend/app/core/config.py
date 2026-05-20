@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = ""
     GOOGLE_CLIENT_ID: str = ""
     CORS_ORIGINS: List[str] = ["*"]
+    JWT_EXPIRATION_MINUTES: int = 43200
 
     @property
     def sync_database_url(self) -> str:

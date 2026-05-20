@@ -32,3 +32,15 @@ export interface Diagnosis {
   }>;
   created_at: string;
 }
+
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
+export interface AuthResponse {
+  access_token: string;
+  token_type: string;
+  user: User;
+}
